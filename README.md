@@ -1,6 +1,6 @@
 # OV7725_CPUfree_Camera
 
-**Zero-CPU-Overhead OV7725 Camera Streaming Library for RP2350**
+**Zero-CPU-Overhead OV7725 Camera Streaming Library for RP2350(90fps)**
 
 **RP2350向けゼロCPUオーバーヘッド OV7725 カメラストリーミングライブラリ(90fps)**
 
