@@ -14,7 +14,7 @@ CPU を一切使わずに OV7725 カメラから連続画像取得を行う Ardu
   
 - **Dual-Buffer Architecture** / **ダブルバッファ構造**: A面/B面のダブルバッファメモリで、キャプチャと処理を完全に並列化 / Dual-buffer (A/B surface) enables complete parallelization of capture and processing
   
-- **Fixed 30 FPS Streaming** / **30fps 固定配信**: 安定した 30fps で連続キャプチャ / Stable 30fps continuous capture
+- **Fixed 90 FPS Streaming** / **90fps 固定配信**: 安定した 90fps で連続キャプチャ / Stable 90fps continuous capture
   
 - **Color & Monochrome Modes** / **カラー・モノクロ選択**: カラー or グレースケールを選択可能 / Choose between color or grayscale output
   
@@ -226,7 +226,7 @@ uint8_t brightness = frame[y * width + x];
 
 ### ダブルバッファ動作 / Dual-Buffer Operation
 
-30fps 固定で A面(bufC) / B面(bufD) を交互使用 / Alternates between bufC and bufD at fixed 30fps:
+90fps 固定で A面(bufC) / B面(bufD) を交互使用 / Alternates between bufC and bufD at fixed 90fps:
 
 ```
 Frame 1: [DMA → bufC] ... [完成 / Complete] → bufC = Ready (ID=0)
@@ -284,12 +284,12 @@ Frame 読取と次フレーム取得が重ならない / Frame reading and next 
 
 | Mode | Resolution | Color | Buffer Size | Memory (dual) | FPS |
 |------|------------|-------|-------------|---------------|-----|
-| QVGA | 320×240 | Color | 153.6 KB | 307.2 KB | 30 |
-| QVGA | 320×240 | Mono | 76.8 KB | 153.6 KB | 30 |
-| QQVGA | 160×120 | Color | 38.4 KB | 76.8 KB | 30 |
-| QQVGA | 160×120 | Mono | 19.2 KB | 38.4 KB | 30 |
-| QQQVGA | 80×60 | Color | 9.6 KB | 19.2 KB | 30 |
-| QQQVGA | 80×60 | Mono | 4.8 KB | 9.6 KB | 30 |
+| QVGA | 320×240 | Color | 153.6 KB | 307.2 KB | 90 |
+| QVGA | 320×240 | Mono | 76.8 KB | 153.6 KB | 90 |
+| QQVGA | 160×120 | Color | 38.4 KB | 76.8 KB | 90 |
+| QQVGA | 160×120 | Mono | 19.2 KB | 38.4 KB | 90 |
+| QQQVGA | 80×60 | Color | 9.6 KB | 19.2 KB | 90 |
+| QQQVGA | 80×60 | Mono | 4.8 KB | 9.6 KB | 90 |
 
 ## Example Applications / 応用例
 
